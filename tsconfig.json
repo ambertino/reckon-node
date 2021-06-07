@@ -1,0 +1,10 @@
+{
+  "compilerOptions": {
+    "baseUrl": "src",
+    "outDir": "build",
+    "esModuleInterop": true
+  },
+  "include": [
+    "*/**/*.ts",
+  ],
+}
