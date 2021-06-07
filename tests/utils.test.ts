@@ -1,4 +1,4 @@
-import { keepTrying } from '../src/utils';
+import { keepTrying, toLowerChar } from '../src/utils';
 
 class ApiError extends Error {
   response: {
@@ -59,6 +59,19 @@ describe('keepTrying', () => {
 
     expect(exec).rejects.toThrow('Test error');
     expect(reportError).toHaveBeenCalledTimes(1);
+  });
+});
+
+describe('String utils', () => {
+  it('toLowerChar should return correct results', () => {
+    expect(toLowerChar('G')).toEqual('g');
+    expect(toLowerChar('y')).toEqual('y');
+    expect(toLowerChar('3')).toEqual('3');
+    expect(toLowerChar('')).toEqual('');
+  });
+
+  it('toLowerChar should throw if argiment is more than 1 character long', () => {
+    expect(() => toLowerChar('test')).toThrow();
   });
 });
 
