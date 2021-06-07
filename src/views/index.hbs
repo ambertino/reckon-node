@@ -1,5 +1,8 @@
 <ul>
 {{#each outputs}}
-  <li>{{ this.num }}: {{this.output}}</li>
+  <li class="output-item">
+    <span class="output-num">{{ this.num }}</span>
+    <span class="output-text">{{this.output}}</span>
+  </li>
 {{/each}}
 </ul>
