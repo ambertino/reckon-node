@@ -16,4 +16,4 @@ router.get('/test2', (req, res, next) => {
     .catch(next);
 });
 
-module.exports = router;
+export default router;
